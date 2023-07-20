@@ -251,7 +251,6 @@ def emupwGetMobilePasswd(serialNumber,userName,realm=None):
             countZero = 20
         if countZero < 0:
             countZero = 0
-
         if countOne == 9 or countOne == 15:
             countOne = countOne -1
         if countOne > 26:
