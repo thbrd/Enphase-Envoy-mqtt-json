@@ -30,7 +30,7 @@ import hashlib
 import os
 
 
-with open("/data/options.json", "r") as f:
+with open("data/options.json", "r") as f:
     option_dict = json.load(f)
 # print(option_dict["x"])
 
