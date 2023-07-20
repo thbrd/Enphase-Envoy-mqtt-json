@@ -376,6 +376,7 @@ def scrape_stream():
     marker = b'data: '
     while True:
         try:
+            print(dt_string,'Start the stream')
             url = 'http://%s/stream/meter' % ENVOY_HOST
             stream = requests.get(url, auth=auth, stream=True, verify=False, timeout=5)
             if stream.status_code == 401:
