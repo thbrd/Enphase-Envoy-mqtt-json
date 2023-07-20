@@ -62,7 +62,7 @@ MQTT_TOPIC_FREEDS = "Inverter/GridWatts"
 userName = b'installer'
 DEFAULT_REALM = b'enphaseenergy.com'
 gSerialNumber = None
-tokenfile = '/data/token.txt'
+tokenfile = 'data/token.txt'
 ####  End Settings - no changes after this line
 
 #json validator
