@@ -134,19 +134,19 @@ def token_gen(token):
 if not os.path.exists(tokenfile):
     with open(tokenfile, 'w') as f:
         f.write('')
-
-with open(tokenfile, 'r') as f:
-    try:
-        ENVOY_TOKEN = f.read()
-        if ENVOY_TOKEN:
-            print (dt_string, 'Read token from file',tokenfile,': ',ENVOY_TOKEN)
-            pass
-        else:
-            print (dt_string, 'No token in file:', tokenfile)
-            ENVOY_TOKEN=token_gen(None)
-            pass
-    except Exception as e:
-        print(e)
+if envoy_version == 7:
+    with open(tokenfile, 'r') as f:
+        try:
+            ENVOY_TOKEN = f.read()
+            if ENVOY_TOKEN:
+                print (dt_string, 'Read token from file',tokenfile,': ',ENVOY_TOKEN)
+                pass
+            else:
+                print (dt_string, 'No token in file:', tokenfile)
+                ENVOY_TOKEN=token_gen(None)
+                pass
+        except Exception as e:
+            print(e)
 
 # The callback for when the client receives a CONNACK response from the server.
     # Subscribing after on_connect() means that if the connection is lost
